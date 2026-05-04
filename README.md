@@ -1,16 +1,37 @@
-# HomeMind AI Smart Home Dashboard
+---
 
-An Embedded IoT Smart Home Dashboard designed for realtime sensor monitoring, smart device control, automation logic, and AI-assisted interaction.
+## Key Features
 
-This project focuses on connecting embedded devices with a realtime dashboard using **ESP32**, **Firebase Realtime Database**, **FastAPI**, and a web-based control interface.
+- Realtime monitoring for temperature, humidity, PM2.5 and room status
+- Smart device control through Firebase Realtime Database
+- Web dashboard for monitoring and controlling devices
+- Automation logic based on sensor conditions
+- AI Smart Chat for natural language interaction
+- Smart Notes automation system
+- Alert-based UI reactions for abnormal conditions
+- Dark / Light mode dashboard
+- Energy usage estimation and optimization suggestions
 
 ---
 
-## Project Overview
+## Tech Stack
 
-HomeMind is a smart home system that monitors environmental data and controls home devices in realtime.
+| Layer | Technologies |
+|---|---|
+| **Embedded / IoT** | ESP32, Arduino, C/C++, Sensors, Relay Module |
+| **Realtime Database** | Firebase Realtime Database |
+| **Backend** | Python, FastAPI, REST API |
+| **Frontend** | HTML, CSS, JavaScript |
+| **AI-assisted Features** | Local AI / Ollama, Smart Notes, Natural Language Commands |
 
-The system is designed to demonstrate an end-to-end IoT workflow:
+---
 
-```txt
-Sensors / ESP32 → Firebase Realtime Database → FastAPI Backend → Web Dashboard → Device Control / Automation
+## Demo Screenshots
+
+> Screenshots will be added here.
+
+```md
+![Dashboard Preview](./screenshots/dashboard.png)
+![AI Chat Preview](./screenshots/ai-chat.png)
+![Smart Notes Preview](./screenshots/smart-notes.png)
+![Firebase Sync Preview](./screenshots/firebase-sync.png)
