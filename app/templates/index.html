@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-theme="dark">
+  <div id="scrollProgress" class="scroll-progress"></div>
+  <div id="sceneWipe" class="scene-wipe"></div>
+
+  <div class="ambient">
+    <div class="ambient-gradient"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <header class="app-header">
+    <div class="brand-lockup">
+      <div class="brand-mark"><span>HM</span></div>
+      <div>
+        <p class="eyebrow">Optimized Demo HomeOS</p>
+        <h1>HomeMind Demo</h1>
+      </div>
+    </div>
+
+    <nav id="sideNav" class="main-nav">
+      <a class="nav-link active" href="#overview">Demo</a>
+      <a class="nav-link" href="#smart-auto">Auto</a>
+      <a class="nav-link" href="#rooms">Phòng</a>
+      <a class="nav-link" href="#alerts">Cảnh báo</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggleBtn" aria-label="Đổi giao diện">
+        <span class="theme-sun">☀️</span>
+        <span class="theme-moon">🌙</span>
+      </button>
+      <button id="refreshBtn" class="btn ghost">Sync</button>
+      <button id="runHomeOSBtn" class="btn primary">AI Optimize</button>
+      <button id="resetBtn" class="btn danger">Reset</button>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section id="overview" class="section demo-board">
+      <article class="demo-hero motion-card reveal-card">
+        <div class="hero-left">
+          <div class="section-label">
+            <span class="signal-dot"></span>
+            <p class="eyebrow">Live Demo Control</p>
+          </div>
+          <h2>Smart Home Demo</h2>
+          <div class="hero-actions">
+            <button id="openChatBtn" class="btn primary big-btn">Mở AI Assistant</button>
+            <a class="btn ghost" href="#rooms">Xem phòng</a>
+          </div>
+        </div>
+
+        <div class="demo-home-card">
+          <div class="home-mini">
+            <div class="mini-roof"></div>
+            <div class="mini-house">
+              <span class="room-dot living"></span>
+              <span class="room-dot bed"></span>
+              <span class="room-dot kitchen"></span>
+              <span class="room-dot garden"></span>
+            </div>
+          </div>
+          <div class="demo-status">
+            <span id="scoreLabel" class="status-chip">--</span>
+            <strong id="homeScore">--</strong>
+            <small>Home Score</small>
+          </div>
+        </div>
+      </article>
+
+      <div class="stat-strip reveal-card delay-1">
+        <article class="stat-tile">
+          <span>Mode</span>
+          <b id="homeMode">Home</b>
+        </article>
+        <article class="stat-tile">
+          <span>Điện hiện tại</span>
+          <b id="energyNow">--</b>
+        </article>
+        <article class="stat-tile">
+          <span>kWh/ngày</span>
+          <b id="energyDay">--</b>
+        </article>
+        <article class="stat-tile">
+          <span>Thiết bị bật</span>
+          <b id="activeDevices">0</b>
+        </article>
+        <article class="stat-tile alert-stat" id="alertTile">
+          <span>Cảnh báo</span>
+          <b id="alertCount">0 cảnh báo</b>
+        </article>
+        <article class="stat-tile">
+          <span>Updated</span>
+          <b id="lastUpdate">--</b>
+        </article>
+      </div>
+
+      <article class="score-reason-card motion-card reveal-card delay-2">
+        <p class="eyebrow">AI Summary</p>
+        <p id="scoreReasons" class="muted">Đang tải đánh giá...</p>
+      </article>
+    </section>
+
+    <section id="smart-auto" class="section scene-section">
+      <div class="section-head reveal-card">
+        <div>
+          <p class="eyebrow">Demo Automation</p>
+          <h3>Auto Mode</h3>
+        </div>
+        <select id="homeosProfile" class="field field-select">
+          <option value="comfort">Comfort</option>
+          <option value="eco">Eco</option>
+          <option value="sleep">Sleep</option>
+          <option value="focus">Focus</option>
+        </select>
+      </div>
+
+      <div class="scene-mode-grid">
+        <button class="scene-mode auto-card reveal-card" data-profile="comfort">
+          <i>01</i><b>Comfort</b><small>Dễ chịu, ổn định, cân bằng cảm giác.</small>
+        </button>
+        <button class="scene-mode auto-card reveal-card delay-1" data-profile="eco">
+          <i>02</i><b>Eco</b><small>Tiết kiệm điện, bật đúng thiết bị cần.</small>
+        </button>
+        <button class="scene-mode auto-card reveal-card delay-2" data-profile="sleep">
+          <i>03</i><b>Sleep</b><small>Êm, dịu sáng, hợp ban đêm.</small>
+        </button>
+        <button class="scene-mode auto-card reveal-card delay-3" data-profile="focus">
+          <i>04</i><b>Focus</b><small>Giữ không gian tập trung.</small>
+        </button>
+      </div>
+
+      <article class="impact-cinema motion-card reveal-card">
+        <div>
+          <p class="eyebrow">AI Plan Preview</p>
+        </div>
+        <div id="comfortImpact" class="impact-content">
+          Chọn một Auto Mode để hệ thống tự điều chỉnh toàn nhà theo cảm biến hiện tại.
+        </div>
+      </article>
+    </section>
+
+    <section id="rooms" class="section rooms-stage">
+      <div class="section-head reveal-card">
+        <div>
+          <p class="eyebrow">Realtime Demo Rooms</p>
+          <h3>Phòng & thiết bị</h3>
+        </div>
+      </div>
+      <div id="roomsGrid" class="rooms-grid"></div>
+    </section>
+
+    <section id="alerts" class="section alert-grid">
+      <article class="motion-card reveal-card">
+        <div class="section-head compact">
+          <div>
+            <p class="eyebrow">Alert Demo</p>
+            <h3>Cảnh báo</h3>
+          </div>
+          <span id="alertVisualChip" class="status-chip">Ổn định</span>
+        </div>
+        <div class="alert-meter">
+          <span id="alertReactorFill"></span>
+        </div>
+        <div id="alertList" class="alert-list"></div>
+      </article>
+
+      <article class="motion-card reveal-card delay-1">
+        <div class="section-head compact">
+          <div>
+            <p class="eyebrow">Energy Coach</p>
+            <h3>Gợi ý tiết kiệm</h3>
+          </div>
+        </div>
+        <p id="energyProSummary" class="muted">AI sẽ gợi ý tối ưu điện năng theo trạng thái hiện tại.</p>
+        <div id="energyTips" class="tip-list"></div>
+      </article>
+    </section>
+
+    <section id="smart-bubble" class="utility-hidden">
+      <div id="rulesList"></div>
+      <input id="ruleName">
+      <input id="ruleRoom">
+      <input id="ruleMetric">
+      <input id="ruleOperator">
+      <input id="ruleValue">
+      <input id="ruleDevice">
+      <input id="ruleOn">
+      <input id="rulePatch">
+    </section>
+  </main>
+
+  <button id="chatFab" class="chat-fab" aria-label="Mở AI Chat">
+    <span class="fab-ripple"></span>
+    <span class="fab-core">AI</span>
+  </button>
+
+  <div id="chatOverlay" class="chat-overlay" aria-hidden="true"></div>
+
+  <section id="floatingChatPanel" class="floating-chat-panel" aria-hidden="true">
+    <header class="floating-chat-head">
+      <div>
+        <p class="eyebrow">AI Smart Chat</p>
+        <h3>HomeMind Assistant</h3>
+        <p class="muted">Ra lệnh, hỏi trạng thái, tạo smart note hoặc tối ưu toàn nhà.</p>
+      </div>
+      <button id="chatCloseBtn" class="chat-close-btn" aria-label="Đóng chat">✕</button>
+    </header>
+
+    <div class="floating-chat-body">
+      <div class="floating-chat-main">
+        <div id="bubbleLog" class="bubble-log">
+          <div class="bubble ai">Mình sẵn sàng. Bạn có thể nói: “phòng ngủ hơi nóng”, “tối ưu nhà theo eco”, hoặc “tạo note bật máy lạnh khi 33 độ”.</div>
+        </div>
+
+        <div class="quick-chat-prompts">
+          <button class="quick-prompt" data-prompt="phòng ngủ hơi nóng">Phòng ngủ hơi nóng</button>
+          <button class="quick-prompt" data-prompt="điện hôm nay ra sao">Điện hôm nay</button>
+          <button class="quick-prompt" data-prompt="tối ưu nhà theo eco">Eco mode</button>
+          <button class="quick-prompt" data-prompt="tạo note bật máy lạnh phòng khách khi nhiệt độ 33 độ">Tạo note máy lạnh</button>
+        </div>
+
+        <div class="bubble-input-row">
+          <input id="bubbleInput" class="field" placeholder="Nhập lệnh hoặc câu hỏi...">
+          <button id="bubbleSendBtn" class="btn primary">Gửi</button>
+        </div>
+      </div>
+
+      <aside class="floating-chat-side">
+        <div class="notes-head">
+          <div>
+            <p class="eyebrow">Smart Notes</p>
+            <h4>Note đã tạo</h4>
+          </div>
+          <span id="notesCount" class="status-chip">0 note</span>
+        </div>
+        <div id="smartNotesList" class="notes-list-chat"></div>
+      </aside>
+    </div>
+  </section>
+
+  <div id="toastHost" class="toast-host"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+  <script src="/static/firebase_config.js"></script>
+  <script src="/static/app.js"></script>
+  <script src="/static/firebase_bridge.js"></script>
+</body>
+</html>
