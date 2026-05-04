@@ -45,3 +45,18 @@
 ### Firebase Sync Preview
 
 ![Firebase Sync Preview](./screenshots/firebase-sync/6.png)
+
+## Demo Video
+
+A short demo video showing the main workflow of the HomeMind AI Smart Home Dashboard.
+
+The demo includes:
+
+- Firebase Realtime Database synchronization
+- Realtime dashboard monitoring
+- Smart device control
+- Auto Mode automation
+- AI Assistant interaction
+- Smart Notes automation
+
+[Watch Demo Video](https://drive.google.com/file/d/1gaampTVrBAsVZE6X8f8OjjAExAJHJfi5/view?usp=sharing)
