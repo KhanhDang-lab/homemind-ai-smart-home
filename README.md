@@ -28,10 +28,20 @@
 
 ## Demo Screenshots
 
-> Screenshots will be added here.
+### Dashboard Preview
 
-```md
-![Dashboard Preview](./screenshots/dashboard.png)
-![AI Chat Preview](./screenshots/ai-chat.png)
-![Smart Notes Preview](./screenshots/smart-notes.png)
-![Firebase Sync Preview](./screenshots/firebase-sync.png)
+| Overview | Automation |
+|---|---|
+| ![Dashboard 1](./screenshots/dashboard/1.png) | ![Dashboard 2](./screenshots/dashboard/2.png) |
+
+| Room Control | Alert / AI Summary |
+|---|---|
+| ![Dashboard 3](./screenshots/dashboard/3.png) | ![Dashboard 4](./screenshots/dashboard/4.png) |
+
+### AI Chat Preview
+
+![AI Chat Preview](./screenshots/ai-chat/5.png)
+
+### Firebase Sync Preview
+
+![Firebase Sync Preview](./screenshots/firebase-sync/6.png)
