@@ -1,1 +1,156 @@
-
+{
+  "smart-home": {
+    "mode": "Home",
+    "updated_at": "2026-05-04T06:55:21.367Z",
+    "commands": {
+      "phong_khach": {
+        "den": true,
+        "quat": false,
+        "may_lanh": false,
+        "loc_khi": false
+      },
+      "phong_ngu": {
+        "den_ngu": false,
+        "quat": true,
+        "may_lanh": false,
+        "tao_am": false
+      },
+      "nha_bep": {
+        "den_bep": true,
+        "hut_mui": false,
+        "hut_am": false,
+        "loc_khi_mini": false
+      },
+      "san_vuon": {
+        "den_san": false,
+        "bom_nuoc": false,
+        "camera": true
+      }
+    },
+    "value": {
+      "phong_khach": {
+        "name": "Phòng khách",
+        "cam_bien": {
+          "nhiet_do": 30,
+          "do_am": 65,
+          "pm25": 28,
+          "anh_sang": 58
+        },
+        "thiet_bi": {
+          "den": {
+            "name": "Đèn",
+            "on": true,
+            "power": 70
+          },
+          "quat": {
+            "name": "Quạt",
+            "on": false,
+            "power": 32
+          },
+          "may_lanh": {
+            "name": "Máy lạnh",
+            "on": false,
+            "target": 26
+          },
+          "loc_khi": {
+            "name": "Lọc khí",
+            "on": false,
+            "power": 60
+          }
+        }
+      },
+      "phong_ngu": {
+        "name": "Phòng ngủ",
+        "cam_bien": {
+          "nhiet_do": 28,
+          "do_am": 68,
+          "pm25": 22,
+          "anh_sang": 24
+        },
+        "thiet_bi": {
+          "den_ngu": {
+            "name": "Đèn ngủ",
+            "on": false,
+            "power": 25
+          },
+          "quat": {
+            "name": "Quạt",
+            "on": true,
+            "power": 46
+          },
+          "may_lanh": {
+            "name": "Máy lạnh",
+            "on": false,
+            "target": 26
+          },
+          "tao_am": {
+            "name": "Tạo ẩm",
+            "on": false,
+            "power": 40
+          }
+        }
+      },
+      "nha_bep": {
+        "name": "Nhà bếp",
+        "cam_bien": {
+          "nhiet_do": 30.4,
+          "do_am": 72,
+          "pm25": 2,
+          "anh_sang": 70,
+          "gas": 51
+        },
+        "thiet_bi": {
+          "den_bep": {
+            "name": "Đèn bếp",
+            "on": true,
+            "power": 80
+          },
+          "hut_mui": {
+            "name": "Hút mùi",
+            "on": false,
+            "power": 45
+          },
+          "hut_am": {
+            "name": "Hút ẩm",
+            "on": false,
+            "power": 55
+          },
+          "loc_khi_mini": {
+            "name": "Lọc khí mini",
+            "on": false,
+            "power": 60
+          }
+        }
+      },
+      "san_vuon": {
+        "name": "Sân vườn",
+        "cam_bien": {
+          "nhiet_do": 31,
+          "do_am": 74,
+          "pm25": 45,
+          "anh_sang": 82,
+          "do_am_dat": 42
+        },
+        "thiet_bi": {
+          "den_san": {
+            "name": "Đèn sân",
+            "on": false,
+            "power": 50
+          },
+          "bom_nuoc": {
+            "name": "Bơm nước",
+            "on": false,
+            "power": 65
+          },
+          "camera": {
+            "name": "Camera",
+            "on": true,
+            "power": 100
+          }
+        }
+      }
+    },
+    "history": {},
+    "notes": {}
+  }
+}
