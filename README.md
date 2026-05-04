@@ -68,3 +68,13 @@ This demo video presents the main workflow of the **HomeMind AI Smart Home Dashb
 ### Firebase Realtime Database Sync
 
 ![Firebase Sync Preview](./screenshots/firebase-sync/6.png)
+
+---
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/KhanhDang-lab/homemind-ai-smart-home.git
+cd homemind-ai-smart-home
